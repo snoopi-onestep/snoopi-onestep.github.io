@@ -16,7 +16,7 @@
       property="og:description"
       content="SNOOPI: Supercharged One-step Diffusion Distillation with Proper Guidance"
     />
-    <meta property="og:image" content="https://i.imgur.com/4mgxLiG.jpg" />
+    <meta property="og:image" content="https://imgur.com/a/Ry1S7Uc" />
     <meta property="og:url" content="https://SNOOPI.github.io/" />
     <meta property="og:type" content="website" />
     <title>
@@ -64,9 +64,9 @@
   </head>
   <body>
     <div class="container-fluid">
-      <!-- <div class="row">
-        <img style="width: 100%" src="./static/banner_v2.jpg" alt="" />
-      </div> -->
+      <div class="row">
+        <img style="width: 100%" src="./static/banner_v2.png" alt="" />
+      </div>
       <!-- Title  -->
       <div
         class="page-title"
@@ -77,7 +77,8 @@
           align-items: center;
         "
       >
-        <h1>SNOOPI: Supercharged One-step Diffusion Distillation with Proper Guidance</h1>
+        <h1>SNOOPI</h1>
+        <h2>Supercharged One-step Diffusion Distillation with Proper Guidance</h2>
       </div>
       <!-- Author list -->
       <div class="row">
@@ -845,7 +846,7 @@
         </div>
       </div>
       <!-- Table -->
-      <!-- <div class="background-block row mob-bottom" style="padding-bottom: 3vh">
+      <div class="background-block row mob-bottom" style="padding-bottom: 3vh">
         <div
           class="col-12 Abstract-box mob-col-12"
           style="padding: 0 !important"
@@ -857,160 +858,156 @@
         <div style="overflow-x: auto; margin: 0 auto">
           <table style="margin: 0 auto">
             <caption>
-              <b>Quantitative comparisons</b>
-              between our method and others on zero-shot MS COCO-2014 benchmark.
-              For multi-step SD models, we report each with the
-              <i>cfg</i>
-              that returns the best FID, e.g.,
-              <i>cfg</i>
-              = 3 for SDv1.5 and
-              <i>cfg</i>
-              = 2 for SDv2.1. We also report performance of the teacher model
-              (SDv2.1 with
-              <i>cfg</i>
-              = 4.5).
+              <b>HPSv2 comparisons</b>
+              between our method and previous works.
               <sup>†</sup>
               denotes reported numbers,
               <sup>‡</sup>
-              denotes our rerun based on provided GitHubs. `-' denotes
-              unreported data. Ours* indicates training with additional image
-              regularization.
+              denotes our rerun based on the publicly available model checkpoints.
             </caption>
             <thead>
               <tr>
                 <th style="color: white; font-weight: bold">Method</th>
-                <th style="color: white; font-weight: bold">NFEs</th>
-                <th style="color: white; font-weight: bold">FID↓</th>
-                <th style="color: white; font-weight: bold">CLIP↑</th>
-                <th style="color: white; font-weight: bold">Precision↑</th>
-                <th style="color: white; font-weight: bold">Recall↑</th>
+                <th style="color: white; font-weight: bold">Anime</th>
+                <th style="color: white; font-weight: bold">Photo</th>
+                <th style="color: white; font-weight: bold">Concept Art</th>
+                <th style="color: white; font-weight: bold">Paintings</th>
+                <th style="color: white; font-weight: bold">Average</th>
               </tr>
             </thead>
             <tbody style="border-top: 3px solid white">
               <tr>
-                <td>StyleGAN-T<sup>†</sup></td>
-                <td>1</td>
-                <td>13.90</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td colspan="6" style="text-align: center; background: linear-gradient(to right, #f9f9f967, #d3d3d3);">Stable Diffusion 1.5-based backbone</td>
               </tr>
               <tr>
-                <td>GigaGAN<sup>†</sup></td>
-                <td>1</td>
-                <td>9.09</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr style="border-top: 1px solid white">
-                <td>SDv1.5 (<i>cfg</i> = 3)<sup>†</sup></td>
-                <td>25</td>
-                <td>8.78</td>
-                <td>0.30</td>
-                <td>0.59</td>
-                <td><b>0.53</b></td>
-              </tr>
-              <tr>
-                <td>SDv2.1 (<i>cfg</i> = 2)<sup>‡</sup></td>
-                <td>25</td>
-                <td>9.64</td>
-                <td>0.31</td>
-                <td>0.57</td>
-                <td><b>0.53</b></td>
-              </tr>
-              <tr>
-                <td>SDv2.1 (<i>cfg</i> = 4.5)<sup>‡</sup></td>
-                <td>25</td>
-                <td>12.26</td>
-                <td><b>0.33</b></td>
-                <td><u>0.61</u></td>
-                <td>0.41</td>
-              </tr>
-              <tr style="border-top: 1px solid white">
-                <td>SD Turbo<sup>‡</sup></td>
-                <td>1</td>
-                <td>16.10</td>
-                <td><b>0.33</b></td>
-                <td><b>0.65</b></td>
-                <td>0.35</td>
-              </tr>
-              <tr>
-                <td>UFOGen<sup>†</sup></td>
-                <td>1</td>
-                <td>12.78</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>MD-UFOGen<sup>†</sup></td>
-                <td>1</td>
-                <td>11.67</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>HiPA<sup>†</sup></td>
-                <td>1</td>
-                <td>13.91</td>
-                <td>0.31</td>
-                <td>-</td>
-                <td>-</td>
+                <td>SDv1.5<sup>‡</sup></td>
+                <td>26.51</td>
+                <td>27.19</td>
+                <td>26.06</td>
+                <td>26.12</td>
+                <td>26.47</td>
               </tr>
               <tr>
                 <td>InstaFlow-0.9B<sup>‡</sup></td>
-                <td>1</td>
-                <td>13.33</td>
-                <td>0.30</td>
-                <td>0.53</td>
-                <td>0.45</td>
+                <td>26.10</td>
+                <td>26.62</td>
+                <td>25.92</td>
+                <td>25.95</td>
+                <td>26.15</td>
               </tr>
-              <tr>
-                <td>DMD<sup>†</sup></td>
-                <td>1</td>
-                <td>11.49</td>
-                <td><u>0.32</u></td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>DMD2<sup>†</sup></td>
-                <td>1</td>
-                <td><u>8.35</u></td>
-                <td></td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>SwiftBrush</td>
-                <td>1</td>
-                <td>15.46</td>
-                <td>0.30</td>
-                <td>0.47</td>
-                <td>0.46</td>
-              </tr>
-              <tr style="border-top: 1px solid white; color: #cb9d06">
-                <td>Ours</td>
-                <td>1</td>
-                <td>8.77</td>
-                <td><u>0.32</u></td>
-                <td>0.55</td>
-                <td><b>0.53</b></td>
+                <td>DMD2<sup>‡</sup></td>
+                <td>26.39</td>
+                <td>27.00</td>
+                <td>25.80</td>
+                <td>25.83</td>
+                <td>26.26</td>
               </tr>
               <tr style="color: #cb9d06">
-                <td>Ours*</td>
-                <td>1</td>
-                <td><b>8.14</b></td>
-                <td><u>0.32</u></td>
-                <td>0.57</td>
-                <td><u>0.52</u></td>
+                <td>PG-SB</td>
+                <td><u>27.18</u></td>
+                <td><u>27.58</u></td>
+                <td><u>26.69</u></td>
+                <td><u>26.62</u></td>
+                <td><u>27.02</u></td>
+              </tr>
+              <tr style="color: #cb9d06">
+                <td>PG-SB + NASA</td>
+                <td><b>27.19</b></td>
+                <td><b>27.59</b></td>
+                <td><b>26.71</b></td>
+                <td><b>26.63</b></td>
+                <td><b>27.03</b></td>
+              </tr>
+              <tr style="border-top: 1px solid white">
+                <tr>
+                  <td colspan="6" style="text-align: center; background: linear-gradient(to right, #f9f9f967, #d3d3d3);">Stable Diffusion 2.1-based backbone</td>
+                </tr>
+                <td>SDv2.1<sup>†</sup></td>
+                <td>27.48</td>
+                <td>26.89</td>
+                <td>26.86</td>
+                <td><b>27.46</b></td>
+                <td>27.17</td>
+              </tr>
+              <tr>
+                <td>SB<sup>†</sup></td>
+                <td>26.91</td>
+                <td>27.21</td>
+                <td>26.32</td>
+                <td>26.37</td>
+                <td>26.70</td>
+              </tr>
+              <tr>
+                <td>SBv2<sup>†</sup></td>
+                <td>27.25</td>
+                <td>27.62</td>
+                <td>26.86</td>
+                <td>26.77</td>
+                <td>27.13</td>
+              </tr>
+              <tr style="color: #cb9d06">
+                <td>PG-SB</td>
+                <td><u>27.56</u></td>
+                <td><u>27.84</u></td>
+                <td><u>26.97</u></td>
+                <td>27.03</td>
+                <td><u>27.35</u></td>
+              </tr>
+              <tr style="color: #cb9d06">
+                <td>PG-SB + NASA</td>
+                <td><b>27.71</b></td>
+                <td><b>27.99</b></td>
+                <td><b>27.14</b></td>
+                <td><u>27.27</u></td>
+                <td><b>27.53</b></td>
+              </tr>
+              <tr style="border-top: 1px solid white">
+                <tr>
+                  <td colspan="6" style="text-align: center; background: linear-gradient(to right, #f9f9f967, #d3d3d3);">PixArt-&alpha;-based backbone</td>
+                </tr>
+                <td>PixArt-&alpha;<sup>‡</sup></td>
+                <td>29.62</td>
+                <td><u>29.17</u></td>
+                <td>28.79</td>
+                <td>28.69</td>
+                <td>29.07</td>
+              </tr>
+              <tr>
+                <td>YOSO<sup>‡</sup></td>
+                <td>28.79</td>
+                <td>28.09</td>
+                <td>28.57</td>
+                <td>28.55</td>
+                <td>28.50</td>
+              </tr>
+              <tr>
+                <td>DMD<sup>‡</sup></td>
+                <td>29.31</td>
+                <td>28.67</td>
+                <td>28.46</td>
+                <td>28.41</td>
+                <td>28.71</td>
+              </tr>
+              <tr style="color: #cb9d06">
+                <td>PG-SB</td>
+                <td><u>32.19</u></td>
+                <td>29.09</td>
+                <td><u>30.39</u></td>
+                <td><u>29.69</u></td>
+                <td><u>30.34</u></td>
+              </tr>
+              <tr style="color: #cb9d06">
+                <td>PG-SB + NASA</td>
+                <td><b>32.56</b></td>
+                <td><b>29.55</b></td>
+                <td><b>31.24</b></td>
+                <td><b>30.96</b></td>
+                <td><b>31.08</b></td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div> -->
+      </div>
       <!-- Comparison -->
       <div class="background-block row mob-bottom" style="padding-bottom: 5vh">
         <div
