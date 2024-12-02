@@ -11,6 +11,7 @@ body {
   font-family: "HarmonyOS", sans-serif;
   background: rgb(0, 0, 0);
   color: #fff;
+  font-size: 35px;
 }
 
 .font-ma {
@@ -44,13 +45,13 @@ strong {
 }
 
 .page-title h1 {
-  font-size: 70px;
+  font-size: 185px;
   font-family: "SourceHanSerifCN-Heavy";
 }
 
 .page-title h2 {
   margin-top: 2vh;
-  font-size: 35px;
+  font-size: 100px;
   font-family: "SourceHanSerifCN-Heavy";
 }
 
@@ -119,7 +120,8 @@ strong {
 .title-link a {
   color: #fff;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 60px; 
+  /* Author's names  */
 }
 
 .newBtnLayout {
@@ -151,6 +153,7 @@ strong {
   margin: 0 20px;
   border-radius: 20px;
   text-decoration: none;
+  font-size: 28px;
 }
 
 .button-link:hover {
@@ -159,12 +162,8 @@ strong {
   background: #fff;
 }
 
-.button-link {
-  font-size: 20px;
-}
-
 .button-link span {
-  font-size: 20px;
+  font-size: 50px;
 }
 
 .text-center {
@@ -172,7 +171,7 @@ strong {
 }
 
 .lcms-text {
-  font-size: 27px;
+  font-size: 32px;
   font-weight: 700;
   margin: 5vh 0;
 }
@@ -198,15 +197,16 @@ strong {
 }
 
 .Abstract h3 {
-  font-size: 30px;
+  font-size: 60px;
   font-weight: 700;
   margin: 0;
 }
 
 .abstract-text {
-  font-size: 18px;
+  font-size: 40px;
   line-height: 1.8;
   /* word-break: break-all; */
+  /* Abstract text */
 }
 
 .generated-images-row {
@@ -262,4 +262,8 @@ table td {
 thead,
 caption {
   color: white;
+}
+
+.yellow-text {
+    color: #F6B26B;  /* This is a yellow color that matches your existing theme */
 }
