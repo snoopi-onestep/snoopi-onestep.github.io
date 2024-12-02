@@ -45,14 +45,14 @@ strong {
 }
 
 .page-title h1 {
-  font-size: 120px;
+  font-size: 96px;
   font-family: "SourceHanSerifCN-Heavy";
   /* SNOOPI */
 }
 
 .page-title h2 {
   margin-top: 2vh;
-  font-size: 80px;
+  font-size: 64px;
   font-family: "SourceHanSerifCN-Heavy";
   /* Supercharged One-step Diffusion Distillation with Proper Guidance */
 }
@@ -122,7 +122,7 @@ strong {
 .title-link a {
   color: #fff;
   text-decoration: none;
-  font-size: 50px; 
+  font-size: 35px; 
   /* Author's names and Institute */
 }
 
@@ -155,17 +155,18 @@ strong {
   margin: 0 20px;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 10px;
 }
 
 .button-link:hover {
   text-decoration: none;
   color: #000;
   background: #fff;
+  font-size: 10px;
 }
 
 .button-link span {
-  font-size: 50px;
+  font-size: 25px;
 }
 
 .text-center {
@@ -173,7 +174,7 @@ strong {
 }
 
 .lcms-text {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 700;
   margin: 5vh 0;
 }
@@ -201,13 +202,13 @@ strong {
 }
 
 .Abstract h3 {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 700;
   margin: 0;
 }
 
 .abstract-text {
-  font-size: 40px;
+  font-size: 25px;
   line-height: 1.8;
   /* word-break: break-all; */
   /* Abstract text */
@@ -261,11 +262,14 @@ strong {
 
 table th,
 table td {
-  padding: 0 10px; /* Adjust as needed */
+  padding: 0 25px; /* Adjust as needed */
+  font-size: 23px;
 }
 thead,
 caption {
   color: white;
+  font-size: 23px;
+
 }
 
 .yellow-text {
