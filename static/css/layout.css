@@ -193,7 +193,9 @@ strong {
 
 .title-layout {
   padding: 2vh 0;
-  background: rgb(18, 18, 18);
+  background: rgb(30, 30, 30);
+  color: #fff; /* Add this line to set the text color */
+
 }
 
 .Abstract h3 {
