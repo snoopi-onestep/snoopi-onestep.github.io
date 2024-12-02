@@ -250,69 +250,6 @@
     </head>
 
     <body>
-
-      <!-- NASA method -->
-      <div class="background-block row mob-bottom" style="padding-bottom: 5vh">
-        <div class="col-12 Abstract-box mob-col-12" style="padding: 0 !important">
-          <div class="Abstract title-layout">
-            <h3 class="font-ma">Qualitative Results: Negative Guidance in Inference</h3>
-          </div>
-        </div>
-        <div class="col-12 gif-container">
-          <img id="gifImage" src="static/nasa_GIFs/1.gif" alt="NASA Method Demonstration" class="gif-image" />
-        </div>
-      </div>
-
-      <!-- External Style for better maintainability -->
-      <style>
-        .gif-image {
-          max-width: 100%;
-          height: auto;
-          cursor: pointer;
-        }
-      </style>
-
-      <script>
-        (function () {
-          const gifFiles = [
-            'static/nasa_GIFs/1.gif',
-            'static/nasa_GIFs/2.gif',
-            'static/nasa_GIFs/3.gif',
-            'static/nasa_GIFs/4.gif',
-            'static/nasa_GIFs/5.gif'
-          ];
-          let currentGifIndex = 0;
-          const gifImageElement = document.getElementById("gifImage");
-          let autoplayTimer;
-
-          function displayGif() {
-            gifImageElement.src = gifFiles[currentGifIndex];
-            gifImageElement.onload = function () {
-              const duration = 5000; // Default duration if we can't extract from the gif
-              resetAutoplayTimer(duration);
-            };
-          }
-
-          function nextGif() {
-            currentGifIndex = (currentGifIndex + 1) % gifFiles.length;
-            displayGif();
-          }
-
-          function resetAutoplayTimer(duration) {
-            if (autoplayTimer) {
-              clearTimeout(autoplayTimer); // Reset previous timer
-            }
-            autoplayTimer = setTimeout(nextGif, duration);
-          }
-
-          gifImageElement.addEventListener("click", nextGif);
-          gifImageElement.addEventListener("mouseenter", () => clearTimeout(autoplayTimer));
-          gifImageElement.addEventListener("mouseleave", () => resetAutoplayTimer(1000));
-
-          displayGif(); // Initialize display and start autoplay
-        })();
-      </script>
-
       <!-- Table -->
       <div class="background-block row mob-bottom" style="padding-bottom: 3vh">
         <div class="col-12 Abstract-box mob-col-12" style="padding: 0 !important">
@@ -476,6 +413,69 @@
           </table>
         </div>
       </div>
+      <!-- NASA method -->
+      <div class="background-block row mob-bottom" style="padding-bottom: 5vh">
+        <div class="col-12 Abstract-box mob-col-12" style="padding: 0 !important">
+          <div class="Abstract title-layout">
+            <h3 class="font-ma">Qualitative Results: Negative Guidance in Inference</h3>
+          </div>
+        </div>
+        <div class="col-12 gif-container">
+          <img id="gifImage" src="static/nasa_GIFs/1.gif" alt="NASA Method Demonstration" class="gif-image" />
+        </div>
+      </div>
+
+      <!-- External Style for better maintainability -->
+      <style>
+        .gif-image {
+          max-width: 100%;
+          height: auto;
+          cursor: pointer;
+        }
+      </style>
+
+      <script>
+        (function () {
+          const gifFiles = [
+            'static/nasa_GIFs/1.gif',
+            'static/nasa_GIFs/2.gif',
+            'static/nasa_GIFs/3.gif',
+            'static/nasa_GIFs/4.gif',
+            'static/nasa_GIFs/5.gif'
+          ];
+          let currentGifIndex = 0;
+          const gifImageElement = document.getElementById("gifImage");
+          let autoplayTimer;
+
+          function displayGif() {
+            gifImageElement.src = gifFiles[currentGifIndex];
+            gifImageElement.onload = function () {
+              const duration = 5000; // Default duration if we can't extract from the gif
+              resetAutoplayTimer(duration);
+            };
+          }
+
+          function nextGif() {
+            currentGifIndex = (currentGifIndex + 1) % gifFiles.length;
+            displayGif();
+          }
+
+          function resetAutoplayTimer(duration) {
+            if (autoplayTimer) {
+              clearTimeout(autoplayTimer); // Reset previous timer
+            }
+            autoplayTimer = setTimeout(nextGif, duration);
+          }
+
+          gifImageElement.addEventListener("click", nextGif);
+          gifImageElement.addEventListener("mouseenter", () => clearTimeout(autoplayTimer));
+          gifImageElement.addEventListener("mouseleave", () => resetAutoplayTimer(1000));
+
+          displayGif(); // Initialize display and start autoplay
+        })();
+      </script>
+
+
       <!-- Comparison
       <div class="background-block row mob-bottom" style="padding-bottom: 5vh">
         <div
