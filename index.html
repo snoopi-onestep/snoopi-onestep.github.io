@@ -198,17 +198,34 @@
         <div class="button-flex">
           <a href="http://arxiv.org" class="button-link">
             <span class="icon">
-              <i class="ai ai-arxiv"></i>
+              <i class="ai ai-arxiv" style="font-size: 20px;"></i>
             </span>
             <span>arXiv Paper</span>
           </a>
           <a href="https://github.com/VinAIResearch/SNOOPI" class="button-link">
             <span class="icon">
               <i class="fas fa-sun" style="font-size: 15px;"></i>
-              <!-- <i class="ai ai-arxiv"></i> -->
             </span>
             <span>Code (coming soon)</span>
           </a>
+          <a href="#" onclick="copyBibToClipboard(); return false;" class="button-link">
+            <span class="icon">
+              <i class="fas fa-quote-right" style="font-size: 14px;"></i>
+            </span>
+            <span>BibTeX</span>
+          </a>
+          <script>
+            function copyBibToClipboard() {
+              const bibtex = `@article{snoopi2024,
+                title={SNOOPI: Enhancing Guidance in One-Step Diffusion Models},
+                author={Viet Nguyen and Anh Aengus Nguyen and Trung Dao and Khoi Nguyen and Cuong Pham and Toan Tran and Anh Tran},
+                journal={arXiv preprint},
+                year={2024}
+              }`;
+              navigator.clipboard.writeText(bibtex);
+              alert('BibTeX copied to clipboard!');
+            }
+          </script>
         </div>
       </div>
     </div>
