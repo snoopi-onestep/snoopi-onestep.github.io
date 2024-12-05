@@ -239,29 +239,37 @@
           <h3 class="font-ma">Abstract</h3>
         </div>
       </div>
-      <div class="col-10 mob-col-12 mx-auto" style="padding: 0">
-        <div class="abstract-text" style="text-align: justify; text-justify: inter-word;">
-          Recent approaches have yielded promising results in distilling multi-step text-to-image diffusion models into
-          one-step ones. The state-of-the-art efficient distillation technique, i.e., SwiftBrushv2 (SBv2), even
-          surpasses the teacher model's performance with limited resources. However, our study reveals its instability
-          when handling different diffusion model backbones due to using a fixed guidance scale within the Variational
-          Score Distillation (VSD) loss. Another weakness of the existing one-step diffusion models is the missing
-          support for negative prompt guidance, which is crucial in practical image generation. This paper presents
-          SNOOPI, a novel framework designed to address these limitations by enhancing the guidance in one-step
-          diffusion models during both training and inference. First, we effectively enhance training stability through
-          <strong>P</strong>roper <strong>G</strong>uidance - <strong>S</strong>wift<strong>B</strong>rush (PG-SB),
-          which employs a random-scale classifier-free guidance approach. By varying the guidance scale of both teacher
-          models, we broaden their output distributions, resulting in a more robust VSD loss that enables SB to perform
-          effectively across diverse backbones while maintaining competitive performance. Second, we propose a
-          training-free method called <strong>N</strong>egative-<strong>A</strong>way <strong>S</strong>teer
-          <strong>A</strong>ttention (NASA), which integrates negative prompts into one-step diffusion models via
-          cross-attention to suppress undesired elements in generated images. Our experimental results show that our
-          proposed methods significantly improve baseline models across various metrics. Remarkably, we achieve an HPSv2
-          score of <strong>31.08</strong>, setting a new state-of-the-art benchmark for one-step diffusion models.
+      <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-12 mx-auto" style="padding: 0">
+          <div class="abstract-text" style="text-align: justify; text-justify: inter-word;">
+            Recent approaches have yielded promising results in distilling multi-step text-to-image diffusion models
+            into
+            one-step ones. The state-of-the-art efficient distillation technique, i.e., SwiftBrushv2 (SBv2), even
+            surpasses the teacher model's performance with limited resources. However, our study reveals its instability
+            when handling different diffusion model backbones due to using a fixed guidance scale within the Variational
+            Score Distillation (VSD) loss. Another weakness of the existing one-step diffusion models is the missing
+            support for negative prompt guidance, which is crucial in practical image generation. This paper presents
+            SNOOPI, a novel framework designed to address these limitations by enhancing the guidance in one-step
+            diffusion models during both training and inference. First, we effectively enhance training stability
+            through
+            <strong>P</strong>roper <strong>G</strong>uidance - <strong>S</strong>wift<strong>B</strong>rush (PG-SB),
+            which employs a random-scale classifier-free guidance approach. By varying the guidance scale of both
+            teacher
+            models, we broaden their output distributions, resulting in a more robust VSD loss that enables SB to
+            perform
+            effectively across diverse backbones while maintaining competitive performance. Second, we propose a
+            training-free method called <strong>N</strong>egative-<strong>A</strong>way <strong>S</strong>teer
+            <strong>A</strong>ttention (NASA), which integrates negative prompts into one-step diffusion models via
+            cross-attention to suppress undesired elements in generated images. Our experimental results show that our
+            proposed methods significantly improve baseline models across various metrics. Remarkably, we achieve an
+            HPSv2
+            score of <strong>31.08</strong>, setting a new state-of-the-art benchmark for one-step diffusion models.
+          </div>
         </div>
       </div>
-      <div class="col-1"></div>
     </div>
+
     <!-- Supp Video -->
     <!-- <div class="background-block row mob-bottom" style="padding-bottom: 3vh">
         <div class="col-1"></div>
@@ -1015,28 +1023,29 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- Thanks -->
-    <div class="background-block row mob-bottom" style="padding-bottom: 5vh">
-      <div class="col-12 Abstract-box mob-col-12" style="padding: 0 !important">
-        <div class="Abstract title-layout">
-          <h3 class="font-ma">Acknowledgement</h3>
-        </div>
-      </div>
-      <div class="col-1"></div>
-      <div class="col-10 mob-col-12 abstract-text-box" style="padding: 0">
-        <div class="abstract-text">
-          We would like to thank the
-          <a href="https://latent-consistency-models.github.io/">Latent Consistency Model</a>'s authors for providing such
-          an excellent webpage,
-          and also express our gratitude to the HuggingFace team for their diffusers framework.
-        </div>
+  </div>
+  <!-- Thanks -->
+  <div class="background-block row mob-bottom" style="padding-bottom: 5vh">
+    <div class="col-12 Abstract-box mob-col-12" style="padding: 0 !important">
+      <div class="Abstract title-layout">
+        <h3 class="font-ma">Acknowledgement</h3>
       </div>
     </div>
-    <!-- Add Clustrmaps at the bottom of the page -->
-    <div class="clustrmaps-container" style="display: none;">
-      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=mKmTy9WIS-PpcrMZ_xocK7Ct8YpmKLd1H85iWcFFDlc&cl=ffffff&w=a"></script>
+    <div class="col-1"></div>
+    <div class="col-10 mob-col-12 abstract-text-box" style="padding: 0">
+      <div class="abstract-text">
+        We would like to thank the
+        <a href="https://latent-consistency-models.github.io/">Latent Consistency Model</a>'s authors for providing such
+        an excellent webpage,
+        and also express our gratitude to the HuggingFace team for their diffusers framework.
+      </div>
     </div>
+  </div>
+  <!-- Add Clustrmaps at the bottom of the page -->
+  <div class="clustrmaps-container" style="display: none;">
+    <script type="text/javascript" id="clustrmaps"
+      src="//clustrmaps.com/map_v2.js?d=mKmTy9WIS-PpcrMZ_xocK7Ct8YpmKLd1H85iWcFFDlc&cl=ffffff&w=a"></script>
+  </div>
   </div>
   <div style="display: none; color: #dedede; font-size: 0.5em">
     <a href="https://clustrmaps.com/site/1bzup" title="Visit tracker"><img
