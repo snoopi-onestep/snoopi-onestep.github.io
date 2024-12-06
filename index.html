@@ -495,10 +495,8 @@
             <h3 class="font-ma">Qualitative Results: Negative Guidance in Inference</h3>
           </div>
         </div>
-        <div class="col-12">
-          <div class="gif-container">
-            <img id="gifImage" src="static/nasa_GIFs/1.gif" alt="NASA Method Demonstration" class="gif-image" loading="lazy" />
-          </div>
+        <div class="gif-container">
+          <img id="gifImage" src="static/nasa_GIFs/1.gif" alt="NASA Method Demonstration" class="gif-image" loading="lazy" />
         </div>
       </div>
 
@@ -506,26 +504,35 @@
       <style>
         .gif-container {
           text-align: center;
-          margin-top: 1vh;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          overflow: hidden;
           -webkit-overflow-scrolling: touch;
         }
 
         .gif-image {
+          width: 100%;
           max-width: 100%;
           height: auto;
+          display: block;
+          margin: 0;
+          padding: 0;
           cursor: pointer;
           -webkit-transform: translateZ(0);
           transform: translateZ(0);
           will-change: transform;
         }
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           .gif-container {
-            margin: 0.5vh 0;
+            margin: 0;
+            width: 100%;
           }
           
           .gif-image {
-            width: 95%;
+            width: 100%;
+            margin: 0;
           }
         }
       </style>
