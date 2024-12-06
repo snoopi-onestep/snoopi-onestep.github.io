@@ -102,6 +102,30 @@
 	.image-box{
 		min-width:50%;
 	}
+
+	/* Add new table styles */
+	table {
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+		font-size: 14px;
+		width: auto;
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	table th,
+	table td {
+		padding: 8px 12px;
+		font-size: 14px;
+		text-align: center;
+	}
+
+	table caption {
+		font-size: 16px;
+		white-space: normal;
+		padding: 8px;
+	}
 }
 @media screen and (max-width:992px) {
 	.Abstract-box{

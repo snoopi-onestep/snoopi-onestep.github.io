@@ -260,18 +260,38 @@ strong {
   margin: 0 20px;
 }
 
+table {
+  width: auto;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
 table th,
 table td {
-  padding: 0 25px; /* Adjust as needed */
-  font-size: 23px;
+  padding: 12px 20px;
+  font-size: 18px;
+  white-space: nowrap;
+  text-align: center;
 }
+
 thead,
 caption {
   color: white;
-  font-size: 23px;
+  font-size: 18px;
+}
 
+caption {
+  padding: 10px;
+  white-space: normal;
 }
 
 .yellow-text {
     color: #F6B26B;  /* This is a yellow color that matches your existing theme */
+}
+
+.table-responsive {
+  margin: 0 auto;
+  max-width: 800px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
