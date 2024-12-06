@@ -199,25 +199,28 @@ strong {
 .title-layout {
   padding: 2vh 0;
   background: rgb(30, 30, 30);
-  color: #fff; /* Add this line to set the text color */
-
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .Abstract h3 {
   font-size: 44px;
   font-weight: 700;
   margin: 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .abstract-text {
   font-size: 21px;
   line-height: 1.8;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+.abstract-text strong {
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
 }
 
 .generated-images-row {

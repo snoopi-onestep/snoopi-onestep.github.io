@@ -44,6 +44,41 @@
 
     gtag("config", "G-Z1EKV7PTL0");
   </script>
+
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- Critical CSS -->
+  <style>
+    body {
+      font-family: "HarmonyOS", sans-serif;
+      background: rgb(0, 0, 0);
+      color: #fff;
+      font-size: 30px;
+    }
+    .container-fluid {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    img {
+      max-width: 100%;
+    }
+  </style>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="./static/css/layout.css" as="style">
+  <link rel="preload" href="./static/swiper.min.js" as="script">
+
+  <!-- Defer non-critical CSS -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -1113,6 +1148,20 @@
       },
     });
     swipers.push(mySwiper);
+  }
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/static/js/sw.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful');
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
   }
 </script>
 
