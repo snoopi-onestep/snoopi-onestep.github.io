@@ -239,9 +239,8 @@
           <h3 class="font-ma">Abstract</h3>
         </div>
       </div>
-      <!-- <div class="container"> -->
       <div class="row">
-        <div class="col-lg-10 col-md-10 col-sm-12 mx-auto" style="padding: 0">
+        <div class="col-lg-10 col-md-10 col-sm-12 mx-auto">
           <div class="abstract-text" style="text-align: justify; text-justify: inter-word;">
             Recent approaches have yielded promising results in distilling multi-step text-to-image diffusion models
             into
@@ -496,20 +495,42 @@
             <h3 class="font-ma">Qualitative Results: Negative Guidance in Inference</h3>
           </div>
         </div>
-        <div class="col-12 gif-container">
-          <img id="gifImage" src="static/nasa_GIFs/1.gif" alt="NASA Method Demonstration" class="gif-image" />
+        <div class="col-12">
+          <div class="gif-container">
+            <img id="gifImage" src="static/nasa_GIFs/1.gif" alt="NASA Method Demonstration" class="gif-image" loading="lazy" />
+          </div>
         </div>
       </div>
 
-      <!-- External Style for better maintainability -->
+      <!-- Add the new styles -->
       <style>
+        .gif-container {
+          text-align: center;
+          margin-top: 1vh;
+          -webkit-overflow-scrolling: touch;
+        }
+
         .gif-image {
           max-width: 100%;
           height: auto;
           cursor: pointer;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          will-change: transform;
+        }
+
+        @media (max-width: 768px) {
+          .gif-container {
+            margin: 0.5vh 0;
+          }
+          
+          .gif-image {
+            width: 95%;
+          }
         }
       </style>
 
+      <!-- Replace the existing script with this optimized version -->
       <script>
         (function () {
           const gifFiles = [
@@ -522,32 +543,51 @@
           let currentGifIndex = 0;
           const gifImageElement = document.getElementById("gifImage");
           let autoplayTimer;
+          let isPlaying = true;
 
           function displayGif() {
+            if (!gifImageElement) return;
             gifImageElement.src = gifFiles[currentGifIndex];
-            gifImageElement.onload = function () {
-              const duration = 5000; // Default duration if we can't extract from the gif
-              resetAutoplayTimer(duration);
-            };
           }
 
           function nextGif() {
+            if (!isPlaying) return;
             currentGifIndex = (currentGifIndex + 1) % gifFiles.length;
             displayGif();
+            resetAutoplayTimer();
           }
 
-          function resetAutoplayTimer(duration) {
+          function resetAutoplayTimer() {
             if (autoplayTimer) {
-              clearTimeout(autoplayTimer); // Reset previous timer
+              clearTimeout(autoplayTimer);
             }
-            autoplayTimer = setTimeout(nextGif, duration);
+            if (isPlaying) {
+              autoplayTimer = setTimeout(nextGif, 5000);
+            }
           }
 
-          gifImageElement.addEventListener("click", nextGif);
-          gifImageElement.addEventListener("mouseenter", () => clearTimeout(autoplayTimer));
-          gifImageElement.addEventListener("mouseleave", () => resetAutoplayTimer(1000));
+          // Add visibility change handling
+          document.addEventListener("visibilitychange", () => {
+            isPlaying = !document.hidden;
+            if (isPlaying) {
+              resetAutoplayTimer();
+            } else {
+              clearTimeout(autoplayTimer);
+            }
+          });
 
-          displayGif(); // Initialize display and start autoplay
+          // Mobile-friendly touch events
+          if (gifImageElement) {
+            gifImageElement.addEventListener("click", nextGif);
+            gifImageElement.addEventListener("touchend", (e) => {
+              e.preventDefault();
+              nextGif();
+            });
+          }
+
+          // Initial display
+          displayGif();
+          resetAutoplayTimer();
         })();
       </script>
 

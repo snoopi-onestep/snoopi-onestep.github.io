@@ -184,6 +184,7 @@ strong {
 }
 
 .Abstract-box {
+  width: 100%;
   margin-bottom: 2vh;
 }
 
@@ -192,6 +193,7 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3vh 0;
 }
 
 .title-layout {
@@ -210,8 +212,12 @@ strong {
 .abstract-text {
   font-size: 21px;
   line-height: 1.8;
-  /* word-break: break-all; */
-  /* Abstract text */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .generated-images-row {
